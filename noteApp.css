@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital@0;1&family=Satisfy&display=swap');
+
+@media (max-width: 700px) {
+  #container {
+    width: 100%;
+  }
+  #items {
+    width: 100%;
+  }
+  #flex-div {
+    width: 100%;
+  }
+  .colors-div,
+  .icons {
+    width: 100%;
+    align-items: end;
+    height: 100px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  transition: all 0.3s;   
+ font-family: roboto;
+ position: relative;
+
+}
+#bg-color{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -90;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+ filter: blur(3px); 
+}
+.fullscreen-bg__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+#items {
+  min-width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#note-header-title{
+  background-color: beige ;
+  width: 70%;
+  border-radius: 25px 25px 0 0;
+  color: gray;
+padding: .5rem;
+text-align: center;
+font-family: Pacifico;
+font-size: 28px;
+}
+#line{
+  width: 70%;
+  height: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  &::before{
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: gray;
+  }
+}
+#inp {
+  width: 70%;
+  height: 100px;
+  padding: 1rem;
+  border-radius:0 0 25px 25px;
+  outline: none;
+  border: 0;
+  background-color: beige;
+  font-size: 20px;
+  caret-color: rgb(176, 19, 200);
+  transition: all 0.5s;
+}
+
+.colors-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  align-self: flex-start;
+}
+.colors {
+width: 40px;
+height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+transition: all .5s ;
+}
+
+#flex-div {
+  margin-top: 1rem;
+  width: 70%;
+  min-height: 60px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#white {
+  background-color: white;
+    margin-left: -2.5rem;
+}
+#red {
+  background-color: red;
+  margin-left: -2.5rem;
+}
+#white {
+  background-color: white;
+
+
+}
+#chartreuse {
+  background-color: chartreuse;
+  margin-left: -2.5rem;
+
+}
+#yellow {
+  background-color: yellow;
+  margin-left: -2.5rem;
+
+}
+#aqua {
+  background-color: aqua;
+  margin-left: -2.5rem;
+}
+#beige {
+  background-color: beige;
+  
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.spans {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0.5rem;
+  background-color: beige;
+  color: gray;
+  transition: all .3s;
+}
+.spans:hover{
+scale: 1.05;
+
+}
+
+#span-add:hover {
+ color: rgb(34, 133, 209);
+
+}
+
+#span-remove:hover {
+  color: rgb(192, 16, 0);
+
+}
+
+#span-closeAll:hover {
+ color: red;
+
+}
+#boxs {
+  border-radius: 10px;
+  width: 90%;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-evenly;
+}
+#boxs::-webkit-scrollbar {
+  width: 5px;
+}
+#boxs::-webkit-scrollbar-thumb {
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+}
+.box {
+  min-width: 300px;
+  height: 100px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 28px;
+  background-color:beige;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.close:hover {
+  color: red;
+  transition: all 0.3s;
+}
+.edit {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.edit:hover {
+  color: rgb(0, 30, 255);
+  transition: all 0.3s;
+}
+.tik {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.tik:hover {
+  color: rgb(0, 255, 136);
+  transition: all 0.3s;
+}
+#sure {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  background-color: white;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  z-index: 999;
+  top: -100%;
+  transition: all 0.5s;
+}
+#sure p {
+  margin-bottom: 1rem;
+}
+.btn-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.btns {
+  width: 60px;
+  height: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(17, 33, 178);
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 16px;
+}
+#yes-btn:hover {
+  background-color: rgb(16, 180, 16);
+}
+#no-btn:hover {
+  background-color: rgb(252, 4, 4);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>note app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="noteApp.css" />
+  </head>
+  <body>
+    <div class="fullscreen-bg">
+      <video src="bg motion.mp4" class="fullscreen-bg__video" autoplay muted loop></video>
+    </div>
+    <div id="bg-color"></div>
+    <div id="container">
+      <div id="sure">
+        <p>are you sure?</p>
+        <div class="btn-div">
+          <button class="btns" id="yes-btn">Yes</button>
+          <button class="btns" id="no-btn">No</button>
+        </div>
+      </div>
+
+      <div id="items">
+        <h1 id="note-header-title">Write Your Note</h1>
+        <div id="line"></div>
+        <input type="text" id="inp" placeholder="note..." />
+        <div id="flex-div">
+          <div class="colors-div">
+            <div id="beige" class="colors"></div>
+            <div id="red" class="colors"></div>
+            <div id="chartreuse" class="colors"></div>
+            <div id="yellow" class="colors"></div>
+            <div id="aqua" class="colors"></div>
+            <div id="white" class="colors"></div>
+          </div>
+          <div class="icons">
+            <span title="delete text" class="spans" id="span-remove"
+              ><i class="fa fa-trash"></i
+            ></span>
+            <span title="add note" class="spans" id="span-add"
+              ><i class="fa fa-plus"></i
+            ></span>
+            <span title="remove all note" class="spans" id="span-closeAll"
+              ><i class="fa fa-close"></i
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div id="boxs">
+
+      </div>
+    </div>
+    <script src="noteApp.js"></script>
+   
+  </body>
+</html>
